@@ -3,197 +3,458 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Liyana Singh - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Basic reset and styling */
+        :root {
+            --primary-color: #4CAF7D;     /* Lighter, brighter green */
+            --primary-dark: #3A8E65;      /* Slightly darker for contrast */
+            --primary-light: #88D4AB;     /* Much lighter green */
+            --accent-color: #5EC490;      /* Fresh, vibrant green */
+            --text-color: #333;
+            --light-text: #f8f8f8;
+            --background: #f9fff9;
+            --card-bg: #ffffff;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Arial', sans-serif;
+            background-color: var(--background);
+            color: var(--text-color);
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        /* Header styles */
+        /* Header & Navigation */
         header {
-            background: #333;
-            color: #fff;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
             padding: 20px 0;
-            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         
-        header h1 {
-            margin-bottom: 10px;
-        }
-        
-        nav ul {
-            list-style: none;
+        nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        nav ul li {
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        /* Section styles */
-        section {
-            padding: 60px 0;
-        }
-        
-        section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #333;
-        }
-        
-        /* About section */
-        #about {
-            background: #fff;
-        }
-        
-        .about-content {
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
             display: flex;
             align-items: center;
-            justify-content: space-between;
         }
         
-        .about-text {
-            flex: 1;
-            padding-right: 30px;
-        }
-        
-        .profile-img {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .profile-img img {
-            width: 250px;
-            height: 250px;
+        .logo-img {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            background-color: white;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+            overflow: hidden;
+        }
+        
+        .logo-img img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
         
-        /* Projects section */
-        #projects {
-            background: #f4f4f4;
+        .nav-links {
+            display: flex;
+            list-style: none;
         }
         
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hero Section with Green Gradient */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+        }
+        
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 25px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0; /* Fallback if image doesn't load */
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-dark);
+            font-size: 36px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        /* CV Section */
+        .cv-section {
+            background-color: #f1f8f4;
+        }
+        
+        .cv-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cv-content p {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .experience-item h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .experience-item .date {
+            color: #777;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
         .project-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
         }
         
-        .project-card h3 {
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            height: 200px;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-content h3 {
+            color: var(--primary-dark);
             margin-bottom: 15px;
         }
         
-        /* Skills section */
-        #skills ul {
-            list-style: none;
+        /* Contact Section */
+        .contact-section {
+            background-color: #f1f8f4;
+        }
+        
+        .contact-content {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
         }
         
-        #skills ul li {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-        }
-        
-        /* Contact section */
-        #contact {
-            background: #333;
-            color: #fff;
+        .contact-info {
             text-align: center;
+        }
+        
+        .contact-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(76, 175, 125, 0.3);
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(76, 175, 125, 0.4);
+        }
+        
+        .btn i {
+            margin-right: 8px;
         }
         
         /* Footer */
         footer {
-            background: #222;
-            color: #fff;
+            background-color: var(--primary-dark);
+            color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 0;
         }
         
-        /* Responsive design */
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
             .about-content {
                 flex-direction: column;
+                text-align: center;
+                gap: 20px;
             }
             
-            .about-text {
-                padding-right: 0;
-                margin-bottom: 30px;
+            .profile-img {
+                width: 150px;
+                height: 150px;
             }
             
-            nav ul {
+            .menu-toggle {
+                display: block;
+                font-size: 24px;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+            
+            .contact-content {
                 flex-direction: column;
+                gap: 30px;
             }
-            
-            nav ul li {
-                margin: 5px 0;
-            }
+        }
+        
+        /* Mobile menu toggle (hidden on desktop) */
+        .menu-toggle {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <!-- Header with navigation -->
+    <!-- Header & Navigation -->
     <header>
         <div class="container">
-            <h1>Your Name</h1>
             <nav>
-                <ul>
+                <div class="logo">
+                    <div class="logo-img">
+                        <img src="images/Profess1.jpg" alt="Liyana Singh">
+                    </div>
+                    <span>Liyana Singh</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-img">
+                    <img src="images/Profess1.jpg" alt="Liyana Singh">
+                </div>
+                <h1>I'm Liyana Singh</h1>
+                <p>Mechatronic Engineering Student | Researcher | Innovator</p>
+                <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i>Contact Me</a>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm [Your Name], a [Your Profession] passionate about [your interests]. Welcome to my portfolio website where I showcase my work and skills.</p>
-                    <p>I have experience in [your experience] and I'm always looking to learn new technologies and take on challenging projects.</p>
-                    <p>When I'm not coding, I enjoy [your hobbies/interests].</p>
+                    <p>Hello! I'm Liyana Singh, a passionate Mechatronic Engineering student with a focus on medical device innovation and healthcare technology. I'm dedicated to applying engineering principles to solve complex medical challenges and improve patient outcomes.</p>
+                    <p>My academic journey has provided me with a strong foundation in robotics, automation, medical instrumentation, and signal processing. I'm particularly interested in the development of affordable and accessible medical technologies for underserved communities.</p>
+                    <p>When I'm not in the lab or working on projects, I enjoy reading research papers, participating in technology competitions, and mentoring aspiring engineers from underrepresented backgrounds.</p>
                 </div>
-                <div class="profile-img">
-                    <img src="images/profile.jpg" alt="Your Name">
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="cv-section">
+        <div class="container">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="cv-content">
+                <p>My CV provides a comprehensive overview of my education, skills, research experience, and accomplishments in the field of mechatronic engineering.</p>
+                <a href="info/cv" class="btn"><i class="fas fa-download"></i>Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-item">
+                <h3>Biomedical Engineering Intern</h3>
+                <p class="company">Impulse Biomedical Solutions</p>
+                <p class="date">June 2022 - Present</p>
+                <p>Assisted in the development of novel cardiac monitoring devices, conducted testing and validation of biomedical equipment, and contributed to research on non-invasive diagnostic techniques. Collaborated with senior engineers to optimize device functionality and user experience.</p>
+                <a href="info/letter1" class="btn"><i class="fas fa-download"></i>Letter of Recommendation</a>
             </div>
         </div>
     </section>
@@ -201,59 +462,109 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2>My Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Description of your first project. What technologies you used and what problem it solves.</p>
-                    <p><a href="#">View Project</a> | <a href="#">GitHub Repository</a></p>
+                    <div class="project-img">
+                        <i class="fas fa-mouse"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>MicroMouse</h3>
+                        <p>Designed and programmed an autonomous maze-solving robot that uses sensors and algorithms to navigate complex pathways. Implemented path optimization techniques to achieve competition-level performance.</p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Description of your second project. What technologies you used and what problem it solves.</p>
-                    <p><a href="#">View Project</a> | <a href="#">GitHub Repository</a></p>
-                </div>
-                <div class="project-card">
-                    <h3>Project 3</h3>
-                    <p>Description of your third project. What technologies you used and what problem it solves.</p>
-                    <p><a href="#">View Project</a> | <a href="#">GitHub Repository</a></p>
+                    <div class="project-img">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Penguin Remote Pulse Oximeter</h3>
+                        <p>Developed a wearable pulse oximeter device shaped like a penguin for pediatric patients. The device remotely monitors oxygen saturation levels and transmits data to healthcare providers, making continuous monitoring less intrusive for children.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>My Skills</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>Git/GitHub</li>
-                <li>Responsive Design</li>
-                <li>Python</li>
-                <li>React</li>
-                <!-- Add more skills as needed -->
-            </ul>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>I'm always interested in new opportunities and collaborations.</p>
-            <p>Email: <a href="mailto:youremail@example.com" style="color: #fff;">youremail@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername" style="color: #fff;">github.com/yourusername</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" style="color: #fff;">linkedin.com/in/yourprofile</a></p>
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>singhliyana2003@gmail.com</p>
+                    <a href="mailto:singhliyana2003@gmail.com" class="btn">Send Email</a>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>linkedin.com/in/liyana-singh</p>
+                    <a href="https://za.linkedin.com/in/liyana-s-1a181b2b6?trk=people-guest_people_search-card" class="btn">Connect</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
+            <p>&copy; 2023 Liyana Singh. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu if open
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        
+        // Simple animation for section titles
+        document.addEventListener('DOMContentLoaded', function() {
+            const sectionTitles = document.querySelectorAll('.section-title');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sectionTitles.forEach(title => {
+                title.style.opacity = 0;
+                title.style.transform = 'translateY(20px)';
+                title.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(title);
+            });
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
