@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #4CAF7D;     /* Lighter, brighter green */
-            --primary-dark: #3A8E65;      /* Slightly darker for contrast */
-            --primary-light: #88D4AB;     /* Much lighter green */
-            --accent-color: #5EC490;      /* Fresh, vibrant green */
+            --primary-color: #4A90E2;     /* Pleasant medium blue */
+            --primary-dark: #3A75B8;      /* Slightly darker blue */
+            --primary-light: #87CEEB;     /* Light sky blue */
+            --accent-color: #5F9EA0;      /* Cadet blue - blue-green mix */
             --text-color: #333;
             --light-text: #f8f8f8;
-            --background: #f9fff9;
+            --background: #F0F8FF;        /* Alice blue - very light blue */
             --card-bg: #ffffff;
         }
         
@@ -72,6 +72,13 @@
             justify-content: center;
             color: var(--primary-color);
             font-weight: bold;
+            overflow: hidden;
+        }
+        
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .nav-links {
@@ -100,7 +107,7 @@
         .hero {
             padding: 160px 0 100px;
             text-align: center;
-            background: linear-gradient(rgba(46, 139, 87, 0.9), rgba(29, 92, 58, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232E8B57"/><path d="M0 0L100 100" stroke="%231d5c3a" stroke-width="2"/><path d="M100 0L0 100" stroke="%231d5c3a" stroke-width="2"/></svg>');
+            background: linear-gradient(rgba(74, 144, 226, 0.9), rgba(58, 117, 184, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%234A90E2"/><path d="M0 0L100 100" stroke="%233A75B8" stroke-width="2"/><path d="M100 0L0 100" stroke="%233A75B8" stroke-width="2"/></svg>');
             background-size: cover;
             color: white;
         }
@@ -119,15 +126,16 @@
             border: 5px solid white;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             margin-bottom: 25px;
-            background-image: url('images/Profess2.jpg');
-            background-size: cover;
-            background-position: center;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+        
         .profile-img img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* This ensures your image fills the space without distortion */
+            object-fit: cover;
         }
         
         .hero h1 {
@@ -183,7 +191,7 @@
         
         /* CV Section */
         .cv-section {
-            background-color: #f1f8f4;
+            background-color: #e6f2ff;
         }
         
         .cv-content {
@@ -237,23 +245,14 @@
             transform: translateY(-5px);
         }
         
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            margin-bottom: 25px;
-            overflow: hidden; /* This is crucial - keeps image within circle */
+        .project-img {
+            height: 200px;
+            background-color: var(--primary-light);
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* This makes the image fill the container without distortion */
+            color: white;
+            font-size: 40px;
         }
         
         .project-content {
@@ -267,7 +266,7 @@
         
         /* Contact Section */
         .contact-section {
-            background-color: #f1f8f4;
+            background-color: #e6f2ff;
         }
         
         .contact-content {
@@ -299,13 +298,13 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
+            box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
         }
         
         .btn:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(46, 139, 87, 0.4);
+            box-shadow: 0 6px 15px rgba(74, 144, 226, 0.4);
         }
         
         .btn i {
@@ -352,7 +351,7 @@
             <nav>
                 <div class="logo">
                     <div class="logo-img">
-                        <img src="images/Profess1.jpg">
+                        <img src="images/Profess1.jpg" alt="Liyana Singh">
                     </div>
                     <span>Liyana Singh</span>
                 </div>
@@ -388,8 +387,8 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>Hello! I'm Liyana Singh, a passionate Mechatronic Engineering student with a focus on medical device innovation and healthcare technology. I'm dedicated to applying engineering principles to solve complex medical challenges and improve patient outcomes.</p>
-                    <p>My academic journey has provided me with a strong foundation in biomechanics, medical instrumentation, and signal processing. I'm particularly interested in the development of affordable and accessible medical technologies for underserved communities.</p>
-                    <p>When I'm not in the lab or working on projects, I enjoy reading research papers, participating in medical technology competitions, and mentoring aspiring engineers from underrepresented backgrounds.</p>
+                    <p>My academic journey has provided me with a strong foundation in robotics, automation, medical instrumentation, and signal processing. I'm particularly interested in the development of affordable and accessible medical technologies for underserved communities.</p>
+                    <p>When I'm not in the lab or working on projects, I enjoy reading research papers, participating in technology competitions, and mentoring aspiring engineers from underrepresented backgrounds.</p>
                 </div>
             </div>
         </div>
@@ -400,7 +399,7 @@
         <div class="container">
             <h2 class="section-title">Curriculum Vitae</h2>
             <div class="cv-content">
-                <p>My CV provides a comprehensive overview of my education, skills, research experience, and accomplishments in the field of biomedical engineering.</p>
+                <p>My CV provides a comprehensive overview of my education, skills, research experience, and accomplishments in the field of mechatronic engineering.</p>
                 <a href="#" class="btn"><i class="fas fa-download"></i>Download CV</a>
             </div>
         </div>
@@ -475,7 +474,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Liyana Singh. All rights reserved.</p>
+            <p>&copy; 2023 Liyana Singh. All rights reserved.</p>
         </div>
     </footer>
 
