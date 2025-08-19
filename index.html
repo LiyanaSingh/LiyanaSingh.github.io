@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-blue: #4682B4;     /* Steel blue */
-            --accent-orange: #FF8C42;    /* Vibrant orange */
-            --text-dark: #2C3E50;        /* Dark blue-black */
+            --powder-blue: #B0E0E6;     /* Powder blue */
+            --light-powder: #D4F1F9;    /* Light powder blue */
+            --dark-blue: #2C3E50;       /* Dark blue */
+            --accent-orange: #FF8C42;   /* Vibrant orange */
+            --text-dark: #2C3E50;       /* Dark blue-black */
             --light-text: #f8f8f8;
-            --background: #F5F7FA;
+            --background: #F5FCFF;
             --card-bg: #ffffff;
         }
         
@@ -37,7 +39,7 @@
         
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, var(--primary-blue), #2C3E50);
+            background: linear-gradient(135deg, var(--powder-blue), var(--dark-blue));
             color: white;
             padding: 20px 0;
             position: fixed;
@@ -69,7 +71,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-blue);
+            color: var(--dark-blue);
             font-weight: bold;
             overflow: hidden;
         }
@@ -106,7 +108,7 @@
         .hero {
             padding: 160px 0 100px;
             text-align: center;
-            background: linear-gradient(rgba(70, 130, 180, 0.8), rgba(44, 62, 80, 0.9)), url('images/Back1.jpg');
+            background: linear-gradient(rgba(176, 224, 230, 0.8), rgba(44, 62, 80, 0.9)), url('images/Back1.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -199,7 +201,7 @@
         .section-title {
             text-align: center;
             margin-bottom: 50px;
-            color: var(--text-dark);
+            color: var(--dark-blue);
             font-size: 36px;
             position: relative;
         }
@@ -232,7 +234,7 @@
         
         /* CV Section */
         .cv-section {
-            background-color: #E9F1F7;
+            background-color: var(--light-powder);
         }
         
         .cv-content {
@@ -257,7 +259,7 @@
         }
         
         .experience-item h3 {
-            color: var(--text-dark);
+            color: var(--dark-blue);
             margin-bottom: 10px;
         }
         
@@ -288,7 +290,7 @@
         
         .project-img {
             height: 200px;
-            background-color: #E9F1F7;
+            background-color: var(--powder-blue);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -308,13 +310,13 @@
         }
         
         .project-content h3 {
-            color: var(--text-dark);
+            color: var(--dark-blue);
             margin-bottom: 15px;
         }
         
         /* Contact Section */
         .contact-section {
-            background-color: #E9F1F7;
+            background-color: var(--light-powder);
         }
         
         .contact-content {
@@ -335,7 +337,7 @@
         
         .contact-icon.email {
             color: white;
-            background-color: var(--text-dark);
+            background-color: var(--dark-blue);
             width: 70px;
             height: 70px;
             border-radius: 50%;
@@ -374,9 +376,9 @@
         }
         
         .btn:hover {
-            background-color: var(--primary-blue);
+            background-color: var(--dark-blue);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(70, 130, 180, 0.4);
+            box-shadow: 0 6px 15px rgba(44, 62, 80, 0.4);
         }
         
         .btn i {
@@ -385,7 +387,7 @@
         
         /* Footer */
         footer {
-            background-color: var(--text-dark);
+            background-color: var(--dark-blue);
             color: white;
             text-align: center;
             padding: 30px 0;
@@ -400,7 +402,7 @@
                 top: 80px;
                 left: 0;
                 width: 100%;
-                background: linear-gradient(135deg, var(--primary-blue), #2C3E50);
+                background: linear-gradient(135deg, var(--powder-blue), var(--dark-blue));
                 padding: 20px;
                 text-align: center;
             }
@@ -513,7 +515,7 @@
         <div class="container">
             <h2 class="section-title">Curriculum Vitae</h2>
             <div class="cv-content">
-                <p>My CV provides a comprehensive overview of my education, skills, research experience, and accomplishments in mechatronic engineering.</p>
+                <p>My CV provides a comprehensive overview of my education, skills, accomplishments and experience.</p>
                 <a href="info/cv.pdf" class="btn"><i class="fas fa-download"></i>Download CV</a>
             </div>
         </div>
@@ -524,10 +526,10 @@
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
             <div class="experience-item">
-                <h3>Engineering Intern</h3>
-                <p class="company">Impulse Biomedical Solutions</p>
-                <p class="date">June 2022 - Present</p>
-                <p>Contributed to a team developing accessible medical devices for underserved communities. Gained hands-on experience in the practical application of engineering principles to address healthcare challenges and improve accessibility to medical technology.</p>
+                <h3>Impulse Biomedical</h3>
+                <p class="company">Engineering Intern</p>
+                <p class="date">June 2024 - July 2024</p>
+                <p>Contributed to a team developing accessible medical devices. Gained hands-on experience in the practical application of engineering principles to address healthcare challenges and improve accessibility to medical technology.</p>
                 <a href="info/letter1.pdf" class="btn"><i class="fas fa-download"></i>Letter of Recommendation</a>
             </div>
         </div>
