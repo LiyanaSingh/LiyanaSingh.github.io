@@ -7,14 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #B0E0E6;     /* Powder blue */
-            --primary-dark: #6B8E9D;      /* Darker powder blue */
-            --primary-light: #D4F1F9;     /* Light powder blue */
-            --accent-brown: #8B4513;      /* Dark brown */
-            --accent-orange: #FF8C42;     /* Vibrant orange */
-            --text-color: #333;
+            --primary-blue: #4682B4;     /* Steel blue */
+            --accent-orange: #FF8C42;    /* Vibrant orange */
+            --text-dark: #2C3E50;        /* Dark blue-black */
             --light-text: #f8f8f8;
-            --background: #F5FCFF;
+            --background: #F5F7FA;
             --card-bg: #ffffff;
         }
         
@@ -27,7 +24,7 @@
         
         body {
             background-color: var(--background);
-            color: var(--text-color);
+            color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -40,8 +37,8 @@
         
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: var(--text-color);
+            background: linear-gradient(135deg, var(--primary-blue), #2C3E50);
+            color: white;
             padding: 20px 0;
             position: fixed;
             width: 100%;
@@ -72,7 +69,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-dark);
+            color: var(--primary-blue);
             font-weight: bold;
             overflow: hidden;
         }
@@ -93,7 +90,7 @@
         }
         
         .nav-links a {
-            color: var(--text-color);
+            color: white;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -102,18 +99,18 @@
         }
         
         .nav-links a:hover {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.2);
         }
         
         /* Hero Section with Background Image */
         .hero {
             padding: 160px 0 100px;
             text-align: center;
-            background: linear-gradient(rgba(176, 224, 230, 0.7), rgba(107, 142, 157, 0.8)), url('images/Back1.jpg');
+            background: linear-gradient(rgba(70, 130, 180, 0.8), rgba(44, 62, 80, 0.9)), url('images/Back1.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: var(--text-color);
+            color: white;
             position: relative;
             min-height: 100vh;
             display: flex;
@@ -137,7 +134,7 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 5px solid var(--primary-dark);
+            border: 5px solid var(--accent-orange);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             margin-bottom: 30px;
             overflow: hidden;
@@ -146,21 +143,19 @@
             justify-content: center;
             background-color: #f0f0f0;
             animation: pulse 2s infinite;
-            filter: brightness(1.1) contrast(1.1);
         }
         
         .profile-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(1.1) saturate(1.2);
         }
         
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 15px;
             font-weight: 800;
-            color: var(--accent-brown);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             animation: fadeInUp 1s ease-out 0.3s both;
         }
         
@@ -168,7 +163,7 @@
             font-size: 1.5rem;
             max-width: 700px;
             margin: 0 auto 40px;
-            color: var(--text-color);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             animation: fadeInUp 1s ease-out 0.6s both;
         }
         
@@ -186,13 +181,13 @@
         
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.4);
+                box-shadow: 0 0 0 0 rgba(255, 140, 66, 0.4);
             }
             70% {
-                box-shadow: 0 0 0 15px rgba(139, 69, 19, 0);
+                box-shadow: 0 0 0 15px rgba(255, 140, 66, 0);
             }
             100% {
-                box-shadow: 0 0 0 0 rgba(139, 69, 19, 0);
+                box-shadow: 0 0 0 0 rgba(255, 140, 66, 0);
             }
         }
         
@@ -204,7 +199,7 @@
         .section-title {
             text-align: center;
             margin-bottom: 50px;
-            color: var(--accent-brown);
+            color: var(--text-dark);
             font-size: 36px;
             position: relative;
         }
@@ -237,7 +232,7 @@
         
         /* CV Section */
         .cv-section {
-            background-color: var(--primary-light);
+            background-color: #E9F1F7;
         }
         
         .cv-content {
@@ -262,7 +257,7 @@
         }
         
         .experience-item h3 {
-            color: var(--accent-brown);
+            color: var(--text-dark);
             margin-bottom: 10px;
         }
         
@@ -293,12 +288,19 @@
         
         .project-img {
             height: 200px;
-            background-color: var(--primary-color);
+            background-color: #E9F1F7;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-color);
+            color: var(--text-dark);
             font-size: 40px;
+            overflow: hidden;
+        }
+        
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .project-content {
@@ -306,13 +308,13 @@
         }
         
         .project-content h3 {
-            color: var(--accent-brown);
+            color: var(--text-dark);
             margin-bottom: 15px;
         }
         
         /* Contact Section */
         .contact-section {
-            background-color: var(--primary-light);
+            background-color: #E9F1F7;
         }
         
         .contact-content {
@@ -333,7 +335,7 @@
         
         .contact-icon.email {
             color: white;
-            background-color: var(--accent-brown);
+            background-color: var(--text-dark);
             width: 70px;
             height: 70px;
             border-radius: 50%;
@@ -372,9 +374,9 @@
         }
         
         .btn:hover {
-            background-color: var(--accent-brown);
+            background-color: var(--primary-blue);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(139, 69, 19, 0.4);
+            box-shadow: 0 6px 15px rgba(70, 130, 180, 0.4);
         }
         
         .btn i {
@@ -383,7 +385,7 @@
         
         /* Footer */
         footer {
-            background-color: var(--primary-dark);
+            background-color: var(--text-dark);
             color: white;
             text-align: center;
             padding: 30px 0;
@@ -398,7 +400,7 @@
                 top: 80px;
                 left: 0;
                 width: 100%;
-                background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+                background: linear-gradient(135deg, var(--primary-blue), #2C3E50);
                 padding: 20px;
                 text-align: center;
             }
@@ -433,7 +435,7 @@
             .menu-toggle {
                 display: block;
                 font-size: 24px;
-                color: var(--text-color);
+                color: white;
                 background: none;
                 border: none;
                 cursor: pointer;
@@ -498,9 +500,9 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>My engineering identity is rooted in applying technical knowledge with the intention to improve lives. When I applied to university, I was driven by the idea of helping people and knew that my strengths in maths and physics could be put to good use in engineering. I've always been drawn to mechatronics and biomedical engineering, where innovation meets care using technology to solve health-related challenges.</p>
-                    <p>This identity has been shaped by both academic and practical experiences. My current research investigating lifting techniques using trajectory optimisation has deepened my interest in biomechanics and how engineering can enhance human performance. I also completed vacation work at Impulse Biomedical, where I worked alongside a team developing medical devices aimed at increasing accessibility in under-resourced communities. This experience made the social impact of engineering feel tangible and strengthened my commitment to biomedical innovation.</p>
-                    <p>I increasingly see myself not just as a student of engineering, but as someone who thinks like an engineer: analytical, creative, and driven by purpose. More than anything, I see engineering as a tool for improving quality of life. I feel most like an engineer when I'm solving meaningful problems and contributing to something bigger than myself.</p>
+                    <p>My engineering philosophy centers on applying technical expertise to create meaningful impact. With strengths in mathematics and physics, I chose engineering as a pathway to develop solutions that improve lives. I'm particularly drawn to mechatronics and biomedical applications where technology intersects with human needs.</p>
+                    <p>My academic research in trajectory optimization for lifting techniques has deepened my understanding of biomechanics and human performance enhancement. My industry experience at Impulse Biomedical exposed me to medical device development for underserved communities, making the social dimension of engineering tangible and compelling.</p>
+                    <p>I see engineering as more than a discipline—it's a mindset characterized by analytical thinking, creativity, and purpose-driven problem solving. I'm most fulfilled when tackling challenges that contribute to something larger than myself and have potential to enhance quality of life.</p>
                 </div>
             </div>
         </div>
@@ -511,7 +513,7 @@
         <div class="container">
             <h2 class="section-title">Curriculum Vitae</h2>
             <div class="cv-content">
-                <p>My CV provides a comprehensive overview of my education, skills, research experience, and accomplishments in the field of mechatronic engineering.</p>
+                <p>My CV provides a comprehensive overview of my education, skills, research experience, and accomplishments in mechatronic engineering.</p>
                 <a href="info/cv.pdf" class="btn"><i class="fas fa-download"></i>Download CV</a>
             </div>
         </div>
@@ -525,7 +527,7 @@
                 <h3>Engineering Intern</h3>
                 <p class="company">Impulse Biomedical Solutions</p>
                 <p class="date">June 2022 - Present</p>
-                <p>Worked alongside a team developing medical devices aimed at increasing accessibility in under-resourced communities. This experience made the social impact of engineering feel tangible and strengthened my commitment to innovation in the mechatronics space.</p>
+                <p>Contributed to a team developing accessible medical devices for underserved communities. Gained hands-on experience in the practical application of engineering principles to address healthcare challenges and improve accessibility to medical technology.</p>
                 <a href="info/letter1.pdf" class="btn"><i class="fas fa-download"></i>Letter of Recommendation</a>
             </div>
         </div>
@@ -538,21 +540,20 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-img">
-                        <i class="fas fa-mouse"></i>
+                        <img src="images/mouse.jpg" alt="MicroMouse Project">
                     </div>
                     <div class="project-content">
                         <h3>MicroMouse</h3>
-                        <p>A micro-mouse is a wheeled robot designed to navigate through a maze using sensors and control algorithms. The goal is for the robot to autonomously find the most efficient route to the center of a maze. In this project, the maze was constructed physically using wooden walls and black tape marking the floor, and the robot used infrared sensors to detect the walls and floor lines. It has an STM32 microcontroller onboard that it uses to make decisions based on what it senses, and to map out the maze in real time to solve it. I worked on both the hardware (sensors and motors etc) and the software (algorithm).</p>
+                        <p>Designed and implemented an autonomous maze-solving robot utilizing infrared sensors for navigation and an STM32 microcontroller for decision-making. Developed both the hardware components (sensors, motors) and software algorithms to enable real-time mapping and efficient pathfinding through complex maze configurations.</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img">
-                        <i class="fas fa-heartbeat"></i>
+                        <img src="images/penguin.jpg" alt="Penguin Conservation Project">
                     </div>
                     <div class="project-content">
                         <h3>Penguin Remote Pulse Oximeter</h3>
-                        <p>This project was undertaken as part of the EEE4113F Design Class of 2025. African Penguins are critically endangered and are projected to become extinct by 2035 if effective conservation measures are not urgently implemented. Our group worked with BirdLife South Africa to develop a system capable of monitoring the body condition and molt stage of African Penguins.</p>
-                        <p>The solution was a lightweight remote pulse oximeter that monitors the pulse and blood oxygen saturation of African Penguins to understand how their condition varies throughout the molt to inform ecological assessments, benefiting researchers, wildlife managers, and conservationists while ensuring that the birds are not disturbed during the molt.</p>
+                        <p>Developed a non-invasive monitoring system for endangered African Penguins as part of a conservation initiative. Created a lightweight remote pulse oximeter to track health metrics during molting periods without disturbing the animals. The collected data supports ecological research and conservation strategies for this critically endangered species.</p>
                     </div>
                 </div>
             </div>
